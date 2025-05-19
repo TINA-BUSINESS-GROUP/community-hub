@@ -1,0 +1,14 @@
+name: 🔖 Auto-label new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label new issue
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          labels: "🆕 needs-triage"
